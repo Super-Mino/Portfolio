@@ -224,7 +224,7 @@ body {
     width: 50%;
     margin: 0;
     text-align: center;
-    transform: translateX(-50%);
+    transform: translateX(-55%);
     font-family: "Century Gothic", CenturyGothic, sans-serif;
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 700;
@@ -324,7 +324,7 @@ body {
 /* Logo Pygame */
 .logo-pygame {
     position: absolute;
-    left: 35%;
+    left: 25%;
     top: 75%;
     height: 20%;
     transform: translate(-50%, -50%);
@@ -335,7 +335,7 @@ body {
 .logo-sdl {
     position: absolute;
     left: 75%;
-    top: 50%;
+    top: 60%;
     height: 50%;
     transform: translate(-50%, -50%);
     filter: drop-shadow(7px 9px 6px rgba(0, 0, 0, 0.22));
