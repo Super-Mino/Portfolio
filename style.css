@@ -1,0 +1,124 @@
+/* Fond global du site */
+:root {
+    --fond-global: #ffecda;
+    --texte-principal: #111111;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--fond-global);
+    color: var(--texte-principal);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* Organisation verticale des modules */
+.page {
+    width: 100%;
+}
+
+/* Premier module */
+.module-introduction {
+    width: 100%;
+    padding: 12px 16px;
+}
+
+/* Identité */
+.identite {
+    margin: 0;
+    padding: 8px 4px;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Le nom est plus marqué visuellement */
+.nom {
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+/* Le domaine possède un aspect plus léger */
+.domaine {
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+/* Le séparateur reste neutre */
+.separateur {
+    font-weight: 400;
+}
+
+
+
+/* Deuxième module : rectangle jaune animé */
+.module-langages {
+    margin: 0 16px;
+    padding: 24px;
+    min-height: 280px;
+    border-radius: 28px;
+    background-color: #f4d35e;
+    animation: variation-jaune 8s ease-in-out infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* Titre placé dans la partie supérieure du module */
+.module-langages h2 {
+    width: 50%;
+    margin: 0;
+    text-align: center;
+    transform: translateX(-40%);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 700;
+    font-family: "Century Gothic", CenturyGothic, sans-serif;
+}
+
+/* Variation progressive de la couleur du fond */
+@keyframes variation-jaune {
+    0% {
+        background-color: #a1f45e;
+    }
+
+    50% {
+        background-color: #48f7b4;
+    }
+
+    100% {
+        background-color: #ffa754;
+    }
+}
+
+
+
+/* Logo Python : 35 % horizontalement, 75 % verticalement */
+.logo-python {
+    position: absolute;
+    left: 35%;
+    top: 75%;
+    width: 8%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(5px 7px 5px rgba(0, 0, 0, 0.22));
+}
+
+/* Logo C++ : 75 % horizontalement, centré verticalement */
+.logo-cpp {
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    width: 18%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(7px 9px 6px rgba(0, 0, 0, 0.22));
+}
+
