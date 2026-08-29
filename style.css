@@ -100,7 +100,7 @@ body {
     min-height: 200px;
     border-radius: 18px;
     background-color: #f4d35e;
-    animation: variation-jaune 8s ease-in-out infinite alternate;
+    animation: variation-fond 20s ease-in-out infinite alternate;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -120,7 +120,7 @@ body {
 }
 
 /* Variation progressive de la couleur du fond */
-@keyframes variation-jaune {
+@keyframes variation-fond {
     0% {
         background-color: #7dc443;
     }
@@ -138,9 +138,9 @@ body {
 .module-langages::before {
     content: "";
     position: absolute;
-    width: 170%;
+    width: 270%;
     height: 75%;
-    left: -70%;
+    left: -110%;
     top: 0;
     background-color: rgba(255, 255, 255, 0.28);
     border-radius: 50%;
@@ -152,7 +152,7 @@ body {
 /* Ondulation progressive de la vague */
 @keyframes mouvement-vague {
     0% {
-        transform: rotate(30deg) translate(-3%, -4%);
+        transform: rotate(27deg) translate(-3%, -4%);
     }
 
     50% {
@@ -160,7 +160,7 @@ body {
     }
 
     100% {
-        transform: rotate(30deg) translate(5%, -4%);
+        transform: rotate(27deg) translate(5%, -4%);
     }
 }
 
@@ -209,7 +209,7 @@ body {
     min-height: 200px;
     border-radius: 18px;
     background-color: #f4d35e;
-    animation: variation-frameworks 8s ease-in-out infinite alternate;
+    animation: variation-frameworks 25s ease-in-out infinite alternate;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -363,7 +363,7 @@ body {
     min-height: 200px;
     border-radius: 18px;
     background-color: #f4d35e;
-    animation: variation-realisations 8s ease-in-out infinite alternate;
+    animation: variation-realisations 12s ease-in-out infinite alternate;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -547,7 +547,7 @@ body {
     min-height: 200px;
     border-radius: 18px;
     background-color: #f4d35e;
-    animation: variation-fin 8s ease-in-out infinite alternate;
+    animation: variation-fin 10s ease-in-out infinite alternate;
     display: flex;
     justify-content: center;
     align-items: flex-start;
