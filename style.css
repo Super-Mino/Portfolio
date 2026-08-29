@@ -336,7 +336,7 @@ body {
     position: absolute;
     left: 75%;
     top: 50%;
-    height: 65%;
+    height: 50%;
     transform: translate(-50%, -50%);
     filter: drop-shadow(7px 9px 6px rgba(0, 0, 0, 0.22));
 }
