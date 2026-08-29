@@ -500,7 +500,7 @@ body {
 
 /* Image du projet */
 .projet-image {
-    flex: 0 0 45%;
+    flex: 0 0 40%;
 }
 
 .projet-image img {
