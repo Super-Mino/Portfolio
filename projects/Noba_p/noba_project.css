@@ -1,0 +1,441 @@
+/* Paramètres généraux */
+:root {
+    --fond-global: #e78446;
+    --fond-bloc: #5fe33e;
+    --texte: #111111;
+    --bleu-interaction: #2563eb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--fond-global);
+    color: var(--texte);
+    font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+
+/* Organisation verticale de la page */
+.page-projet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 16px;
+}
+
+
+/* En-tête */
+.entete-projet {
+    padding: 24px 16px;
+    position: relative;
+}
+
+.retour {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: var(--texte);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.retour:hover,
+.retour:active {
+    color: var(--bleu-interaction);
+}
+
+.entete-projet h1 {
+    margin: 0;
+    padding: 8px 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    line-height: 1;
+}
+
+.titre-principal {
+    font-size: clamp(2.5rem, 7vw, 6rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+    .sous-titre {
+        font-size: clamp(2.5rem, 7vw, 6rem);
+        font-weight: 400;
+        letter-spacing: -0.04em;
+        font-family: "Brush Script MT", cursive;
+    }
+
+.titre-secondaire {
+    font-family: "Century Gothic", CenturyGothic, sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-weight: 550;
+    letter-spacing: 0.08em;
+}
+
+
+/* Bloc d'introduction */
+.introduction-projet {
+    margin: 0 16px;
+    padding: 24px;
+    min-height: 200px;
+    border-radius: 3px;
+    background-color: var(--fond-bloc);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.introduction-projet::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 120px;
+    right: -100px;
+    bottom: -30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: rotate(-18deg);
+}
+
+.introduction-projet p {
+    width: min(65%, 700px);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    font-size: clamp(1.05rem, 2vw, 1.4rem);
+    line-height: 1.6;
+}
+
+
+/* Galerie */
+.galerie {
+    margin: 0 16px;
+    min-height: 560px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    background-color: #d7d8c481;
+}
+
+
+/* Apparition visuelle des images */
+.image-projet {
+    position: absolute;
+    margin: 0;
+    padding: 12px;
+    background-color: rgba(231, 231, 231, 0.7);
+    border-radius: 5px;
+    box-shadow: 8px 12px 20px rgba(20, 40, 60, 0.16);
+}
+
+.image-projet img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+/* Première image : grande et décalée vers la gauche */
+.image-une {
+    width: 48%;
+    left: 7%;
+    top: 13%;
+    transform: rotate(-6deg);
+    z-index: 2;
+}
+
+
+/* Deuxième image : plus petite et placée en hauteur */
+.image-deux {
+    width: 32%;
+    right: 8%;
+    top: 8%;
+    transform: rotate(7deg);
+    z-index: 3;
+}
+
+
+/* Troisième image : large et placée plus bas */
+.image-trois {
+    width: 42%;
+    right: 14%;
+    bottom: 7%;
+    transform: rotate(-4deg);
+    z-index: 4;
+}
+
+
+/* Description */
+.description-projet {
+    margin: 0 16px;
+    padding: 28px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.381);
+}
+
+.description-projet h2,
+.telechargements h2 {
+    margin: 0 0 20px;
+    font-family: "Century Gothic", CenturyGothic, sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.description-projet p {
+    max-width: 850px;
+    margin: 0 0 16px;
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    line-height: 1.6;
+}
+
+.description-projet p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+/* Accès à la version en ligne */
+.essai-projet {
+    margin: 0 16px;
+    padding: 28px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.397);
+    text-align: center;
+}
+
+.essai-projet-indication {
+    font-size:medium
+}
+
+.essai-projet a {
+    color: var(--texte);
+    font-family: "Century Gothic", CenturyGothic, sans-serif;
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    font-weight: 550;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.essai-projet a:hover,
+.essai-projet a:active {
+    color: var(--bleu-interaction);
+}
+
+
+
+/* Téléchargements */
+.telechargements {
+    margin: 0 16px;
+    padding: 28px;
+    border-radius: 3px;
+    background-color: var(--fond-bloc);
+}
+
+.telechargements ul {
+    margin: 0;
+    padding-left: 24px;
+}
+
+.telechargements li {
+    margin-bottom: 12px;
+}
+
+.telechargements li:last-child {
+    margin-bottom: 0;
+}
+
+.telechargements a {
+    color: var(--texte);
+    font-size: 1.05rem;
+    transition: color 0.2s ease;
+}
+
+.telechargements a:hover,
+.telechargements a:active {
+    color: var(--bleu-interaction);
+}
+
+
+/* Pied de page */
+.pied-projet {
+    width: 90%;
+    margin: 0 auto;
+    padding: 24px;
+    min-height: 140px;
+    border-radius: 3px;
+    background-color: var(--fond-bloc);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.pied-projet p {
+    margin: 0;
+}
+
+.liens-fin {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.liens-fin a {
+    color: var(--texte);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.liens-fin a:hover,
+.liens-fin a:active {
+    color: var(--bleu-interaction);
+}
+
+
+/* Animation lente du fond de la galerie */
+.galerie::before {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background-color: rgba(212, 86, 28, 0.4);
+    left: -80px;
+    top: -80px;
+    animation: mouvement-fond 18s ease-in-out infinite alternate;
+}
+
+.galerie::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background-color: rgba(23, 81, 147, 0.187);
+    right: -50px;
+    bottom: -40px;
+    animation: mouvement-fond-secondaire 23s ease-in-out infinite alternate;
+}
+
+
+/* Trajectoire du premier élément */
+@keyframes mouvement-fond {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    35% {
+        transform: translate(30vw, 80px) scale(1.15);
+    }
+
+    70% {
+        transform: translate(55vw, 240px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(15vw, 350px) scale(1.1);
+    }
+}
+
+
+/* Trajectoire du second élément */
+@keyframes mouvement-fond-secondaire {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    40% {
+        transform: translate(-25vw, -100px) scale(1.2);
+    }
+
+    75% {
+        transform: translate(-45vw, 40px) scale(0.85);
+    }
+
+    100% {
+        transform: translate(-10vw, 180px) scale(1.05);
+    }
+}
+
+
+/* Adaptation aux écrans plus petits */
+@media (max-width: 700px) {
+    .introduction-projet p {
+        width: 100%;
+    }
+
+    .galerie {
+        min-height: 480px;
+    }
+
+    .image-une {
+        width: 62%;
+        left: 3%;
+        top: 15%;
+    }
+
+    .image-deux {
+        width: 45%;
+        right: 3%;
+        top: 7%;
+    }
+
+    .image-trois {
+        width: 58%;
+        right: 5%;
+        bottom: 7%;
+    }
+
+    .pied-projet {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* Organisation verticale renforcée sur téléphone */
+@media (max-width: 480px) {
+    .entete-projet {
+        padding: 20px 16px;
+    }
+
+    .introduction-projet,
+    .description-projet,
+    .telechargements {
+        padding: 20px;
+    }
+
+    .galerie {
+        min-height: 390px;
+    }
+
+    .image-une {
+        width: 65%;
+    }
+
+    .image-deux {
+        width: 43%;
+    }
+
+    .image-trois {
+        width: 58%;
+    }
+
+    .liens-fin {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
