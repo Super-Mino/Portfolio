@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+<form
+    class="contact-form"
+    action="https://api.web3forms.com/submit"
+    method="POST"
+>
+
+    <!-- Identifiant public du formulaire Web3Forms -->
+    <input
+        type="hidden"
+        name="access_key"
+        value="<LA_CLÉ>"
+    >
+
+    <!-- Objet du message reçu -->
+    <input
+        type="hidden"
+        name="subject"
+        value="Nouveau message depuis le site"
+    >
+
+    <!--
+        Honeypot anti-spam.
+        Invisible pour l'utilisateur.
+        Ne contient aucune donnée personnelle.
+    -->
+    <input
+        type="checkbox"
+        name="botcheck"
+        class="hidden-field"
+        tabindex="-1"
+        autocomplete="off"
+    >
+
+    <div class="form-header">
+        <span class="form-eyebrow">CONTACT</span>
+
+        <h2>Besoin de s'exprimer ?</h2>
+
+        <p>
+            Une question, une idée ou simplement envie d'échanger ?
+            Écrivez-moi.
+        </p>
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="name">
+            Votre nom / pseudo
+            <span class="optional">(facultatif)</span>
+        </label>
+
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Jean Dupont"
+            autocomplete="name"
+        >
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="email">
+            Votre adresse e-mail
+            <span class="optional">(facultatif)</span>
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="vous@exemple.fr"
+            autocomplete="email"
+        >
+
+        <small>
+            Elle me permettra de vous répondre directement si besoin.
+        </small>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="message">
+            Votre message
+        </label>
+
+        <textarea
+            id="message"
+            name="message"
+            rows="7"
+            placeholder="Écrivez votre message ici..."
+            required
+        ></textarea>
+
+    </div>
+
+
+    <!--
+        Prise de connaissance.
+        Pas de name/value :
+        cette case n'est donc pas envoyée comme donnée du formulaire.
+    -->
+    <div class="privacy-consent">
+
+        <input
+            type="checkbox"
+            id="privacy-consent"
+            required
+        >
+
+        <!-- <label for="privacy-consent">  -->
+        <div class="privacy-consent-text">
+            J'ai pris connaissance des informations relatives à la
+            <a href="#confidentialite">
+                confidentialité
+            </a>
+            et comprends que mon message sera transmis au responsable
+            de ce site par l'intermédiaire de
+            <a
+                href="https://web3forms.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Web3Forms
+            </a>,
+            prestataire technique du formulaire.
+
+            Je comprends également que les données nécessaires au
+            fonctionnement du service peuvent être traitées par
+            Web3Forms et ses prestataires techniques, y compris,
+            lorsque cela est applicable, en dehors de l'Union européenne.
+
+        <!-- </label> -->
+        </div>
+
+    </div>
+
+
+    <button
+        type="submit"
+        class="submit-button"
+    >
+        <span>Envoyer le message</span>
+        <span class="arrow">→</span>
+    </button>
+
+
+    <p class="form-note">
+
+        <strong>À savoir :</strong>
+        ce formulaire utilise le service tiers
+        <a
+            href="https://web3forms.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Web3Forms
+        </a>.
+
+        Votre message ne transite donc pas directement de votre navigateur
+        vers ma boîte e-mail : il est traité par Web3Forms afin d'être
+        acheminé vers moi.
+
+        Web3Forms indique conserver les soumissions pendant 30 jours
+        avec son offre gratuite.
+
+        Si vous ne souhaitez pas utiliser ce service tiers, vous pouvez
+        ne pas utiliser ce formulaire.
+
+    </p>
+
+
+    <section
+        id="confidentialite"
+        class="form-privacy"
+    >
+
+        <div class="privacy-info">
+
+            <div class="privacy-title">
+
+                <span class="privacy-icon">
+                    🔒
+                </span>
+
+                <strong>
+                    Quelques informations sur vos données
+                </strong>
+
+            </div>
+
+
+            <p>
+
+                Pour traiter votre message, les informations que vous
+                choisissez de renseigner sont transmises à
+
+                <a
+                    href="https://web3forms.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <strong>Web3Forms</strong>
+                </a>,
+
+                notre prestataire technique, puis nous sont transmises
+                par e-mail.
+
+            </p>
+
+
+            <p>
+
+                Nous ne demandons que les informations nécessaires à votre
+                demande et ne les utilisons pas à des fins publicitaires.
+
+            </p>
+
+
+            <details>
+
+                <summary>
+                    <span class="summary-arrow">▶</span>
+                    <span>En savoir plus sur le traitement des données</span>
+                </summary>
+
+
+                <p>
+
+                    Les informations transmises peuvent comprendre votre
+                    nom, votre adresse e-mail et le contenu de votre message,
+                    selon les champs que vous choisissez de remplir.
+
+                    Des informations techniques peuvent également être
+                    traitées afin d'assurer le fonctionnement du service
+                    et de limiter les abus.
+
+                </p>
+
+
+                <p>
+
+                    Web3Forms indique conserver les soumissions pendant
+                    30 jours avec son offre gratuite.
+
+                    Le service fait également appel à différents
+                    prestataires techniques et certaines données peuvent
+                    être traitées en dehors de l'Union européenne,
+                    conformément aux mécanismes de transfert indiqués
+                    par Web3Forms.
+
+                </p>
+
+
+                <p class="privacy-warning">
+
+                    <strong>Important :</strong>
+                    évitez de communiquer des informations sensibles ou
+                    confidentielles qui ne seraient pas nécessaires
+                    à votre demande.
+
+                </p>
+
+
+                <p>
+
+                    Pour plus de détails sur les traitements effectués
+                    par Web3Forms, leurs prestataires et leurs modalités
+                    de conservation :
+
+                </p>
+
+
+                <div class="privacy-links">
+
+                    <a
+                        href="confidentialite.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Politique de confidentialité du formulaire
+                    </a>
+
+
+                    <a
+                        href="https://web3forms.com/privacy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Politique de confidentialité de Web3Forms
+                    </a>
+
+
+                    <a
+                        href="https://web3forms.com/dpa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Accord de traitement des données (DPA)
+                    </a>
+
+                </div>
+
+            </details>
+
+        </div>
+
+    </section>
+
+</form>
+
+</body>
+</html>
