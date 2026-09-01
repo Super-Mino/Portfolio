@@ -160,7 +160,7 @@ body {
     }
 
     100% {
-        transform: rotate(27deg) translate(5%, -4%);
+        transform: rotate(30deg) translate(5%, -4%);
     }
 }
 
@@ -465,6 +465,7 @@ body {
 .projet-contenu {
     flex: 1;
     padding-left: 8px;
+    font-family: "Century Gothic", CenturyGothic, sans-serif;
 }
 
 .projet-contenu h3 {
@@ -550,6 +551,7 @@ body {
     background-color: #f4d35e;
     animation: variation-fin 10s ease-in-out infinite alternate;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     position: relative;
@@ -565,6 +567,14 @@ body {
     font-family: "Century Gothic", CenturyGothic, sans-serif;
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 500;
+    letter-spacing: 0.08em;
+}
+
+.module-fin p {
+    margin: 0;
+    font-family: "Century Gothic", CenturyGothic, sans-serif;
+    font-size: clamp(1.0rem, 1.5vw, 2.0rem);
+    font-weight: 550;
     letter-spacing: 0.08em;
 }
 

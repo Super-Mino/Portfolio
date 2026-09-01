@@ -175,6 +175,13 @@ body {
     z-index: 4;
 }
 
+.image-quatre {
+    width: 28%;
+    left: 14%;
+    bottom: 7%;
+    transform: rotate(4deg);
+    z-index: 5;
+}
 
 /* Description */
 .description-projet {
